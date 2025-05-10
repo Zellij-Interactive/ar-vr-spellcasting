@@ -673,7 +673,7 @@ PrefabInstance:
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.16222823
+      value: -0.4211676
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
@@ -683,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9867533
+      value: 0.90698284
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 161.328
+      value: 229.817
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
@@ -2013,8 +2013,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -426.88742, y: 0, z: -327.10364, w: -83.076416}
+  m_margin: {x: -426.88742, y: -75.093765, z: -327.10364, w: -83.076416}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4434,8 +4434,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662065411}
-  m_LocalRotation: {x: -0, y: -0.70814735, z: -0, w: 0.70606476}
-  m_LocalPosition: {x: 0, y: 0, z: -19.36}
+  m_LocalRotation: {x: -0.04108661, y: -0.7595824, z: -0.048212174, w: 0.6473192}
+  m_LocalPosition: {x: 0, y: 0, z: -19.363}
   m_LocalScale: {x: 0.0025668382, y: 0.0025668382, z: 0.0025668382}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4445,10 +4445,10 @@ RectTransform:
   - {fileID: 1950187559}
   - {fileID: 1085041443}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90.169, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.264, y: -99.124, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -23.01, y: 4.02}
+  m_AnchoredPosition: {x: -23.937, y: 4.02}
   m_SizeDelta: {x: 1101, y: 536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662065416
@@ -4986,8 +4986,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5678,10 +5678,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1654020625963138219, guid: 32a25aaeb263423438ea72cc904f7910,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2143569953}
-    - targetCorrespondingSourceObject: {fileID: 1654020625963138219, guid: 32a25aaeb263423438ea72cc904f7910,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2143569961}
     - targetCorrespondingSourceObject: {fileID: 1654020625963138219, guid: 32a25aaeb263423438ea72cc904f7910,
         type: 3}
@@ -5698,21 +5694,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2143569951}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2143569953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143569952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 2143569956}
-  _rigidbody: {fileID: 2143569954}
-  _scaleMassWithSize: 1
 --- !u!54 &2143569954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5739,7 +5720,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2143569955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5762,7 +5743,7 @@ MonoBehaviour:
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 2143569953}
+  _physicsGrabbable: {fileID: 0}
 --- !u!114 &2143569956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5782,7 +5763,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 2143569954}
   _kinematicWhileSelected: 1
   _throwWhenUnselected: 1
 --- !u!114 &2143569961
