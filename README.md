@@ -13,13 +13,13 @@ Cast spells like *Fireball*, *Shield*, and *Teleport* using natural voice comman
 - Meta Quest 3
 - Hand tracking via OVRHand + OVRSkeleton
 
-## Informations
+## Academic Context
 
 University of Applied Sciences Mainz
 
 Department of Technology, Applied Computer Science
 
-Dr. Prof. Ing. Klaus Böhm
+Supervisors: Dr. Prof. Ing. Klaus Böhm und Julian Stockemer
 
 Development: Karim Ouhammi, Walid Beladdad
 
