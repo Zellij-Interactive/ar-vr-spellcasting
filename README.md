@@ -19,8 +19,8 @@ University of Applied Sciences Mainz
 
 Department of Technology, Applied Computer Science
 
-Supervisors: Dr. Prof. Ing. Klaus Böhm und Julian Stockemer
+Supervisors: Dr. Prof. Ing. Klaus Böhm and Julian Stockemer
 
-Developers: Karim Ouhammi, Walid Beladdad
+Developers: Karim Ouhammi and Walid Beladdad
 
 Demo: "to be added later on"
