@@ -21,6 +21,6 @@ Department of Technology, Applied Computer Science
 
 Supervisors: Dr. Prof. Ing. Klaus Böhm und Julian Stockemer
 
-Development: Karim Ouhammi, Walid Beladdad
+Developers: Karim Ouhammi, Walid Beladdad
 
 Demo: "to be added later on"
