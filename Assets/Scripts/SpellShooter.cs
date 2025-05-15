@@ -50,6 +50,16 @@ public class SpellShooter : MonoBehaviour
         if (spellPrefab == null || shootOrigin == null) return;
 
         GameObject spell = Instantiate(spellPrefab, shootOrigin.position, shootOrigin.rotation);
+
+        // 🔒 Prevent instant collision with the player/controller
+        Collider spellCol = spell.GetComponent<Collider>();
+        Collider shooterCol = shootOrigin.GetComponentInParent<Collider>(); // Assumes shooter has a collider
+
+        if (spellCol != null && shooterCol != null)
+        {
+            Physics.IgnoreCollision(spellCol, shooterCol);
+        }
+
         Rigidbody rb = spell.GetComponent<Rigidbody>();
         if (rb != null)
         {
