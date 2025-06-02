@@ -20,38 +20,41 @@ public class VoiceIntentController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI partialTranscriptText;
 
-    private ShapeController[] controllers;
+    private SpellController[] controllers;
 
     private bool appVoiceActive;
 
     private void Awake()
     {
         appVoiceExperience = GetComponent<AppVoiceExperience>();
-        controllers = FindObjectsOfType<ShapeController>();
+        controllers = FindObjectsOfType<SpellController>();
         fullTranscriptText.text = partialTranscriptText.text = string.Empty;
 
         // bind transcriptions and activate state
 
-        appVoiceExperience.events.onFullTranscription.AddListener((transcription) =>
+        appVoiceExperience.VoiceEvents.OnFullTranscription.AddListener((transcription) =>
         {
             fullTranscriptText.text = transcription;
         });
 
-        appVoiceExperience.events.onPartialTranscription.AddListener((transcription) =>
+        appVoiceExperience.VoiceEvents.OnPartialTranscription.AddListener((transcription) =>
         {
             partialTranscriptText.text = transcription;
         });
 
-        appVoiceExperience.events.onRequestCreated.AddListener((request) =>
+        appVoiceExperience.VoiceEvents.OnRequestCreated.AddListener((request) =>
         {
             appVoiceActive = true;
-            Logger.Instance.LogInfo("OnRequestCreated Active");
+            // Logger.Instance.LogInfo("OnRequestCreated Active");
+            Debug.Log("OnRequestCreated Active";
         });
 
-        appVoiceExperience.events.onRequestCompleted.AddListener(() =>
+        appVoiceExperience.VoiceEvents.OnRequestCompleted.AddListener(() =>
         {
             appVoiceActive = false;
-            Logger.Instance.LogInfo("OnRequestCompleted Active");
+            // Logger.Instance.LogInfo("OnRequestCompleted Active");
+            Debug.Log("OnRequestCompleted Active");
+
         });
     }
 
@@ -82,7 +85,8 @@ public class VoiceIntentController : MonoBehaviour
     {
         foreach (var i in info)
         {
-            Logger.Instance.LogInfo($"{prefix} {i}");
+            // Logger.Instance.LogInfo($"{prefix} {i}");
+            Debug.Log($"{prefix} {i}");
         }
     }
 }
