@@ -46,7 +46,7 @@ public class VoiceIntentController : MonoBehaviour
         {
             appVoiceActive = true;
             // Logger.Instance.LogInfo("OnRequestCreated Active");
-            Debug.Log("OnRequestCreated Active";
+            Debug.Log("OnRequestCreated Active");
         });
 
         appVoiceExperience.VoiceEvents.OnRequestCompleted.AddListener(() =>
