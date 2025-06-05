@@ -16,10 +16,14 @@ public class VoiceManager : MonoBehaviour
     [SerializeField] private UnityEvent wakeWordDetected;
     [SerializeField] private UnityEvent<string> completeTranscription;
 
+    private SpellController[] spellControllers;
     private bool _voiceCommandReady;
 
     private void Awake()
     {
+        // Cache spell controllers in the scene
+        spellControllers = FindObjectsOfType<SpellController>();
+
         appVoiceExperience.VoiceEvents.OnRequestCompleted.AddListener(ReactivateVoice);
         appVoiceExperience.VoiceEvents.OnPartialTranscription.AddListener(OnPartialTranscription);
         appVoiceExperience.VoiceEvents.OnFullTranscription.AddListener(OnFullTranscription);
@@ -58,12 +62,35 @@ public class VoiceManager : MonoBehaviour
     {
         if (!_voiceCommandReady) return;
         transcriptionText.text = transcription;
+
+        Debug.Log("Captured partial transcription");
+        Debug.Log(transcription);
     }
 
     private void OnFullTranscription(string transcription)
     {
         if (!_voiceCommandReady) return;
-        _voiceCommandReady = false; // Reset after full transcription
         completeTranscription.Invoke(transcription);
+
+        Debug.Log($"Voice command: {transcription}");
+
+        Debug.Log("Captured full transcription");
+        Debug.Log(transcription);
+
+        if (_voiceCommandReady)
+        {
+            CastSpell(transcription);
+            _voiceCommandReady = false // Reset after full transcription
+        }
+
+        // _voiceCommandReady = false; // Reset after full transcription
+    }
+
+    private void CastSpell(string spellName)
+    {
+        foreach (var controller in spellControllers)
+        {
+            controller.CastSpell(spellName);
+        }
     }
 }
