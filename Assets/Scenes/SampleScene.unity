@@ -916,6 +916,79 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1216024062}
   m_SourcePrefab: {fileID: 100100000, guid: 18d2f5c9c3d7da54c988f7278ccdd68a, type: 3}
+--- !u!1 &263068830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2483171112401766338, guid: f54012181eacade4ea242c65f804720f,
+    type: 3}
+  m_PrefabInstance: {fileID: 327435467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &263068831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2483171112402263010, guid: f54012181eacade4ea242c65f804720f,
+    type: 3}
+  m_PrefabInstance: {fileID: 327435467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &263068835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263068830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd38f1f15d7c6940871260c4e22944b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellShooter: {fileID: 263068836}
+--- !u!114 &263068836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263068830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b61cb1baea648a4583679d8bbcf5c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellPrefab: {fileID: 6703317264523466305, guid: a2f18785336588a45ba9511922757ae2,
+    type: 3}
+  shootOrigin: {fileID: 263068831}
+  shootForce: 500
+  manaSystem: {fileID: 263068838}
+  uiMessagePopup: {fileID: 263068837}
+--- !u!114 &263068837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263068830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafe2fa15b0d47144a2be7ef70bd238f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageText: {fileID: 0}
+--- !u!114 &263068838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263068830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71002b7caf21bce49b368fee207ff1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMana: 250
+  currentMana: 0
+  fireballCost: 50
+  regenAmount: 10
+  regenInterval: 2
 --- !u!1 &292726435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1791,31 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      propertyPath: dynamicResolutionVersion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      propertyPath: quest2MaxDynamicResolutionScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      propertyPath: quest2MinDynamicResolutionScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      propertyPath: quest3MaxDynamicResolutionScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483171112407822886, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      propertyPath: quest3MinDynamicResolutionScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1777,6 +1875,22 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2483171112401766338, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263068835}
+    - targetCorrespondingSourceObject: {fileID: 2483171112401766338, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263068836}
+    - targetCorrespondingSourceObject: {fileID: 2483171112401766338, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263068838}
+    - targetCorrespondingSourceObject: {fileID: 2483171112401766338, guid: f54012181eacade4ea242c65f804720f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263068837}
     - targetCorrespondingSourceObject: {fileID: 2483171112401766336, guid: f54012181eacade4ea242c65f804720f,
         type: 3}
       insertIndex: -1
@@ -2447,12 +2561,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 327435467}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &512720038 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2483171112402218544, guid: f54012181eacade4ea242c65f804720f,
-    type: 3}
-  m_PrefabInstance: {fileID: 327435467}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &512720039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,11 +2573,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b61cb1baea648a4583679d8bbcf5c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6703317264523466305, guid: a2f18785336588a45ba9511922757ae2,
-    type: 3}
-  shootOrigin: {fileID: 876343157}
+  spellPrefab: {fileID: 0}
+  shootOrigin: {fileID: 0}
   shootForce: 500
-  manaSystem: {fileID: 1768056494}
+  manaSystem: {fileID: 0}
   uiMessagePopup: {fileID: 0}
 --- !u!1001 &524918618
 PrefabInstance:
@@ -11851,11 +11958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b61cb1baea648a4583679d8bbcf5c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 6703317264523466305, guid: a2f18785336588a45ba9511922757ae2,
-    type: 3}
-  shootOrigin: {fileID: 512720038}
+  spellPrefab: {fileID: 0}
+  shootOrigin: {fileID: 0}
   shootForce: 500
-  manaSystem: {fileID: 1768056494}
+  manaSystem: {fileID: 0}
   uiMessagePopup: {fileID: 0}
 --- !u!4 &2094684393
 Transform:
