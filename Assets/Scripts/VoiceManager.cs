@@ -86,9 +86,9 @@ public class VoiceManager : MonoBehaviour
     private void CastSpell(string spellName)
     {
         Debug.Log($"Trying to cast spell: {spellName}");
+
         foreach (var controller in spellControllers)
         {
-            Debug.Log($"Casting spell: {spellName}");
             controller.CastSpell(spellName);
         }
     }
