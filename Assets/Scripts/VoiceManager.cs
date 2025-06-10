@@ -63,8 +63,7 @@ public class VoiceManager : MonoBehaviour
         if (!_voiceCommandReady) return;
         transcriptionText.text = transcription;
 
-        Debug.Log("Captured partial transcription");
-        Debug.Log(transcription);
+        Debug.Log($"Captured partial transcription: {transcription}");
     }
 
     private void OnFullTranscription(string transcription)
@@ -72,15 +71,13 @@ public class VoiceManager : MonoBehaviour
         if (!_voiceCommandReady) return;
         completeTranscription.Invoke(transcription);
 
-        Debug.Log($"Voice command: {transcription}");
+        Debug.Log($"Captured full transcription: {transcription}");
 
-        Debug.Log("Captured full transcription");
-        Debug.Log(transcription);
 
         if (_voiceCommandReady)
         {
             CastSpell(transcription);
-            _voiceCommandReady = false // Reset after full transcription
+            _voiceCommandReady = false; // Reset after full transcription
         }
 
         // _voiceCommandReady = false; // Reset after full transcription
@@ -88,8 +85,10 @@ public class VoiceManager : MonoBehaviour
 
     private void CastSpell(string spellName)
     {
+        Debug.Log($"Trying to cast spell: {spellName}");
         foreach (var controller in spellControllers)
         {
+            Debug.Log($"Casting spell: {spellName}");
             controller.CastSpell(spellName);
         }
     }
