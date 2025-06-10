@@ -25,7 +25,7 @@ public class SpellShooter : MonoBehaviour
         }
     }
 
-    private void TryCastSpell()
+    public void TryCastSpell()
     {
         if (manaSystem == null)
         {
@@ -45,9 +45,23 @@ public class SpellShooter : MonoBehaviour
         ShootSpell();
     }
 
-    public void ShootSpell()
+    private void ShootSpell()
     {
-        if (spellPrefab == null || shootOrigin == null) return;
+        Debug.Log("Trying to launched fireball!");
+
+        if (spellPrefab == null) {
+            Debug.LogWarning("SpellPrefab is null");
+
+            return;
+        }
+
+        if (shootOrigin == null)
+        {
+            Debug.LogWarning("shootOrigin is null");
+
+            return;
+        }
+
 
         GameObject spell = Instantiate(spellPrefab, shootOrigin.position, shootOrigin.rotation);
 
