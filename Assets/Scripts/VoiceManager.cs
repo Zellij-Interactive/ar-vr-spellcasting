@@ -1,9 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using Oculus.Voice;
 using System.Reflection;
 using Meta.WitAi.CallbackHandlers;
+using System;
 
 public class VoiceManager : MonoBehaviour
 {
@@ -83,13 +84,29 @@ public class VoiceManager : MonoBehaviour
         // _voiceCommandReady = false; // Reset after full transcription
     }
 
-    private void CastSpell(string spellName)
+    public void CastSpell(String spellName)
     {
+        Debug.LogError("########### responseMatcher intent: " + responseMatcher.intent);
+        Debug.LogError("########### responseMatcher type: " + responseMatcher.GetType());
+        Debug.LogError("########### responseMatcher instance ID: " + responseMatcher.GetInstanceID());
+
         Debug.Log($"Trying to cast spell: {spellName}");
 
-        foreach (var controller in spellControllers)
+        // cast spell info based on intent response
+        if (spellName == null || spellName.Length == 0)
         {
-            controller.CastSpell(spellName);
+            Debug.LogWarning("########### No spell information provided.");
+            return;
+        }
+
+        Debug.Log($"############### Casting spell with info: {string.Join(", ", spellName)}");
+
+        if (spellName.Length > 0)
+        {
+            foreach (var controller in spellControllers)
+            {
+                controller.CastSpell(spellName);
+            }
         }
     }
 }

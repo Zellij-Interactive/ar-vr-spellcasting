@@ -29,7 +29,7 @@ public class PlayerMana : MonoBehaviour
     void RegenerateMana()
     {
         currentMana = Mathf.Min(currentMana + regenAmount, maxMana);
-        Debug.Log("🔄 Mana regenerated: " + currentMana);
+        // Debug.Log("🔄 Mana regenerated: " + currentMana);
     }
 
     public bool CanCastFireball()
