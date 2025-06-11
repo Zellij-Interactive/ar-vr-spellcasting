@@ -80,8 +80,6 @@ public class VoiceManager : MonoBehaviour
             //CastSpell(transcription); We dont need to cast it manually since we have it mapped in the response matcher
             _voiceCommandReady = false; // Reset after full transcription
         }
-
-        // _voiceCommandReady = false; // Reset after full transcription
     }
 
     public void CastSpell(String[] info)
