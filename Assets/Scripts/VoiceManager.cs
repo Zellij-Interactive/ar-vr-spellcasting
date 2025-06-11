@@ -77,36 +77,32 @@ public class VoiceManager : MonoBehaviour
 
         if (_voiceCommandReady)
         {
-            CastSpell(transcription);
+            //CastSpell(transcription); We dont need to cast it manually since we have it mapped in the response matcher
             _voiceCommandReady = false; // Reset after full transcription
         }
 
         // _voiceCommandReady = false; // Reset after full transcription
     }
 
-    public void CastSpell(String spellName)
+    public void CastSpell(String[] info)
     {
-        Debug.LogError("########### responseMatcher intent: " + responseMatcher.intent);
-        Debug.LogError("########### responseMatcher type: " + responseMatcher.GetType());
-        Debug.LogError("########### responseMatcher instance ID: " + responseMatcher.GetInstanceID());
-
-        Debug.Log($"Trying to cast spell: {spellName}");
+        DisplayValues("CastSpell:", info);
 
         // cast spell info based on intent response
-        if (spellName == null || spellName.Length == 0)
-        {
-            Debug.LogWarning("########### No spell information provided.");
-            return;
-        }
-
-        Debug.Log($"############### Casting spell with info: {string.Join(", ", spellName)}");
-
-        if (spellName.Length > 0)
+        if (info.Length > 0)
         {
             foreach (var controller in spellControllers)
             {
-                controller.CastSpell(spellName);
+                controller.CastSpell(info[0]);
             }
+        }
+    }
+
+    private static void DisplayValues(string prefix, string[] info)
+    {
+        foreach (var i in info)
+        {
+            Debug.Log($"{prefix} {i}");
         }
     }
 }

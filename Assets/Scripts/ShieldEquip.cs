@@ -16,7 +16,7 @@ public class ShieldEquip : MonoBehaviour
         }
     }
 
-    void ToggleShield()
+    public void ToggleShield()
     {
         if (currentShield == null)
         {

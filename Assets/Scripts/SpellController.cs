@@ -3,11 +3,14 @@
 public class SpellController : MonoBehaviour
 {
     [Header("Spell Shooter")]
-    public SpellShooter spellShooter;  // Assign this in the Inspector
+    public SpellShooter spellShooter;
+
+    [Header("Shield Equip")]
+    public ShieldEquip shieldEquip;  // Assign this in the Inspector
 
     public void CastSpell(string spellName)
     {
-        Debug.Log($"Casting spell: {spellName}");
+        Debug.Log($"Trying to cast spell: {spellName}");
 
         switch (spellName.ToLower())
         {
@@ -24,7 +27,16 @@ public class SpellController : MonoBehaviour
                 }
                 break;
             case "shield":
-                // Shield logic
+                if (shieldEquip != null)
+                {
+                    Debug.Log("Toggling shield");
+
+                    shieldEquip.ToggleShield();
+                }
+                else
+                {
+                    Debug.LogWarning("⚠️ ShieldEquip reference is not assigned!");
+                }
                 break;
             case "teleport":
                 // Teleport logic
