@@ -2433,6 +2433,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellShooter: {fileID: 512720039}
   shieldEquip: {fileID: 815278465}
+  teleportLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  maxTeleportDistance: 20
 --- !u!1001 &524918618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12438,6 +12442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mountain_terrain_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018393105581225436, guid: 9b2e1ea347f77fb4b936e3d12b09c0be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3018393105581225436, guid: 9b2e1ea347f77fb4b936e3d12b09c0be,
         type: 3}
