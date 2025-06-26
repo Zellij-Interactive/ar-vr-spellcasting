@@ -54,7 +54,7 @@ public class SpellController : MonoBehaviour
             default:
                 Debug.Log("Unknown spell.");
                 if (uiMessagePopup != null)
-                    uiMessagePopup.ShowMessage("Unknown spell!", 1f);
+                    uiMessagePopup.ShowMessage("Unknown spell!", 1.5f);
                 break;
         }
     }
@@ -77,7 +77,7 @@ public class SpellController : MonoBehaviour
         {
             Debug.Log("No teleportable surface hit.");
             if (uiMessagePopup != null)
-                uiMessagePopup.ShowMessage("No teleportable surface hit!", 1f);
+                uiMessagePopup.ShowMessage("No teleportable surface hit!", 1.5f);
         }
     }
 
