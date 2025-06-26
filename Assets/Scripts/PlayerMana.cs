@@ -6,7 +6,7 @@ public class PlayerMana : MonoBehaviour
     public int currentMana;
 
     public int fireballCost = 50;
-    public int regenAmount = 10;
+    public int regenAmount = 1;
     public float regenInterval = 2f;
 
     private float regenTimer;
