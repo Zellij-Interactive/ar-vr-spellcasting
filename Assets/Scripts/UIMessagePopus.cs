@@ -25,6 +25,7 @@ public class UIMessagePopup : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
 
+        messageText.gameObject.SetActive(false);
         if (panel != null) panel.SetActive(false);
     }
 }
