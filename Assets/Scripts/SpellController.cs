@@ -15,6 +15,8 @@ public class SpellController : MonoBehaviour
     public LayerMask teleportLayer; // Set to terrain layer
     public float maxTeleportDistance = 20f;
 
+    public UIMessagePopup uiMessagePopup;  // Assign in Inspector
+
     public void CastSpell(string spellName)
     {
         Debug.Log($"Trying to cast spell: {spellName}");
@@ -51,6 +53,8 @@ public class SpellController : MonoBehaviour
                 break;
             default:
                 Debug.Log("Unknown spell.");
+                if (uiMessagePopup != null)
+                    uiMessagePopup.ShowMessage("Unknown spell!", 1f);
                 break;
         }
     }
@@ -72,6 +76,8 @@ public class SpellController : MonoBehaviour
         else
         {
             Debug.Log("No teleportable surface hit.");
+            if (uiMessagePopup != null)
+                uiMessagePopup.ShowMessage("No teleportable surface hit!", 1f);
         }
     }
 
