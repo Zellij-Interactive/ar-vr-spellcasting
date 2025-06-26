@@ -29,7 +29,7 @@ public class PlayerMana : MonoBehaviour
     void RegenerateMana()
     {
         currentMana = Mathf.Min(currentMana + regenAmount, maxMana);
-        Debug.Log("🔄 Mana regenerated: " + currentMana);
+        Debug.Log("Mana regenerated: " + currentMana);
     }
 
     public bool CanCastFireball()
@@ -40,6 +40,6 @@ public class PlayerMana : MonoBehaviour
     public void SpendFireballMana()
     {
         currentMana -= fireballCost;
-        Debug.Log("🔥 Fireball cast! Mana left: " + currentMana);
+        Debug.Log("Fireball cast! Mana left: " + currentMana);
     }
 }

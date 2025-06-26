@@ -29,13 +29,13 @@ public class SpellShooter : MonoBehaviour
     {
         if (manaSystem == null)
         {
-            Debug.LogWarning("⚠️ Mana system not assigned!");
+            Debug.LogWarning("Mana system not assigned!");
             return;
         }
 
         if (!manaSystem.CanCastFireball())
         {
-            Debug.Log("❌ Not enough mana to cast fireball!");
+            Debug.Log("Not enough mana to cast fireball!");
             if (uiMessagePopup != null)
                 uiMessagePopup.ShowMessage("Not enough mana!", 0.5f);
             return;
@@ -80,6 +80,6 @@ public class SpellShooter : MonoBehaviour
             rb.AddForce(shootOrigin.forward * shootForce);
         }
 
-        Debug.Log("🔥 Fireball launched!");
+        Debug.Log("Fireball launched!");
     }
 }
