@@ -37,7 +37,7 @@ public class SpellShooter : MonoBehaviour
         {
             Debug.Log("Not enough mana to cast fireball!");
             if (uiMessagePopup != null)
-                uiMessagePopup.ShowMessage("Not enough mana!", 0.5f);
+                uiMessagePopup.ShowMessage("Not enough mana!", 1f);
             return;
         }
 
