@@ -15,12 +15,12 @@ Cast spells like *Fireball*, *Shield*, and *Teleport* using natural voice comman
 
 ## Academic Context
 
-University of Applied Sciences Mainz
+- University of Applied Sciences Mainz
 
-Department of Technology, Applied Computer Science
+- Department of Technology, Applied Computer Science
 
-Supervisors: Dr. Prof. Ing. Klaus Böhm and Julian Stockemer
+- **Supervisors:** Dr. Prof. Ing. Klaus Böhm and Julian Stockemer
 
-Developers: Karim Ouhammi and Walid Beladdad
+- **Developers:** Karim Ouhammi and Walid Beladdad
 
-Demo: https://www.youtube.com/watch?v=0eBu-LggmPs
+- **Demo:** https://www.youtube.com/watch?v=0eBu-LggmPs
