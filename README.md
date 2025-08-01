@@ -1,4 +1,4 @@
-# AR-VR-SpellCasting 🎮🪄
+# AR-VR-SpellCasting
 
 An AI voice-controlled and immersive VR spellcasting experience in a virtual reality environment.
 Built with Unity and designed for the Meta Quest 3, it aims to blend intuitive magic mechanics with natural user input.
